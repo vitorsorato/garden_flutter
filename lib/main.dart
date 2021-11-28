@@ -48,13 +48,7 @@ class _MyHomePageState extends State<MyHomePage>
                 icon: const Icon(Icons.menu),
                 onPressed: () {},
               ),
-              FloatingActionButton(
-                  onPressed: () {},
-                  backgroundColor: Colors.grey.withOpacity(0.3),
-                  mini: true,
-                  elevation: 0.0,
-                  child: const Icon(Icons.shopping_cart,
-                      color: Colors.black, size: 17.0)),
+              
             ],
           ),
         ),
