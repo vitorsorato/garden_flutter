@@ -44,7 +44,7 @@ class _PlantListState extends State<PlantList> {
     return ListView(
       children: <Widget>[
         SizedBox(
-          height: 300.0,
+          height: 230.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
             controller: _scrollController,
@@ -86,11 +86,17 @@ class _PlantListState extends State<PlantList> {
 
   getPlantCard(
       String imgPath, String plantType, String plantName) {
-    return Stack(
+        
+    return 
+    GestureDetector(
+      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PlantDetail()));},
+      child:Stack(
       children: <Widget>[
         SizedBox(
-          height: 270.0,
-          width: 225.0,
+          height: 230.0,
+          width: 200.0,
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
@@ -99,21 +105,22 @@ class _PlantListState extends State<PlantList> {
             width: 225.0,
             child: Column(
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        const SizedBox(height: 10.0),
-                      ],
-                    ),
-                    const SizedBox(width: 10.0)
-                  ],
-                ),
+                
                 Image(
+                  
                   image: AssetImage(imgPath),
                   height: 165.0,
+                  
                 ),
+                /*InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PlantDetail()));},
+                      child: Ink.image(
+                        image: AssetImage(imgPath),
+                        height: 165.0,
+                      )
+                ),*/
                 Row(
                   children: <Widget>[
                     const SizedBox(width: 25.0),
@@ -135,32 +142,13 @@ class _PlantListState extends State<PlantList> {
                               fontSize: 20.0,
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
+                              
                         )
                       ],
                     ),
                   ],
                 ),
-                const SizedBox(height: 10.0),
-                Row(
-                  children: <Widget>[
-
-                    const SizedBox(width: 10.0),
-                    InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => PlantDetail()));
-                      },
-                      child: Container(
-                        height: 30.0,
-                        width: 30.0,
-                        decoration:
-                            const BoxDecoration(color: Color(0xFF399D63)),
-                        child: Icon(Icons.help_outline,
-                            color: Colors.white.withOpacity(0.4), size: 20.0),
-                      ),
-                    )
-                  ],
-                )
+                
               ],
             ),
           ),
@@ -173,6 +161,7 @@ class _PlantListState extends State<PlantList> {
           ),
         )
       ],
+      ),
     );
   }
 }
