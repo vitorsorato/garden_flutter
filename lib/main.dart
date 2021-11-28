@@ -48,20 +48,14 @@ class _MyHomePageState extends State<MyHomePage>
                 icon: const Icon(Icons.menu),
                 onPressed: () {},
               ),
-              FloatingActionButton(
-                  onPressed: () {},
-                  backgroundColor: Colors.grey.withOpacity(0.3),
-                  mini: true,
-                  elevation: 0.0,
-                  child: const Icon(Icons.shopping_cart,
-                      color: Colors.black, size: 17.0)),
+
             ],
           ),
         ),
         const Padding(
           padding: EdgeInsets.all(14.0),
           child: Text(
-            'Top Picks',
+            'Garden',
             style: TextStyle(
                 fontFamily: 'Montserrat',
                 fontSize: 40.0,
@@ -79,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage>
             tabs: const <Widget>[
               Tab(
                 child: Text(
-                  'Top',
+                  'Plantas',
                   style: TextStyle(
                       fontSize: 17.0,
                       fontFamily: 'Montserrat',
@@ -88,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage>
               ),
               Tab(
                 child: Text(
-                  'Outdoor',
+                  'Lembretes',
                   style: TextStyle(
                       fontSize: 17.0,
                       fontFamily: 'Montserrat',
@@ -97,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage>
               ),
               Tab(
                 child: Text(
-                  'Indoor',
+                  '',
                   style: TextStyle(
                       fontSize: 17.0,
                       fontFamily: 'Montserrat',
@@ -106,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage>
               ),
               Tab(
                 child: Text(
-                  'Plants',
+                  '',
                   style: TextStyle(
                       fontSize: 17.0,
                       fontFamily: 'Montserrat',

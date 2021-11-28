@@ -44,17 +44,17 @@ class _PlantListState extends State<PlantList> {
     return ListView(
       children: <Widget>[
         SizedBox(
-          height: 350.0,
+          height: 300.0,
           child: ListView(
             padding: const EdgeInsets.only(left: 25.0),
             controller: _scrollController,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              getPlantCard('assets/aloevera.png', '25', 'OUTDOOR', 'Aloe Vera'),
+              getPlantCard('assets/aloevera.png', 'OUTDOOR', 'Aloe Vera'),
               const SizedBox(width: 15.0),
-              getPlantCard('assets/ficus.png', '25', 'INDOOR', 'Ficus'),
+              getPlantCard('assets/ficus.png', 'INDOOR', 'Ficus'),
               const SizedBox(width: 15.0),
-              getPlantCard('assets/flowerplant.png', '25', 'INDOOR', 'Flower'),
+              getPlantCard('assets/flowerplant.png', 'INDOOR', 'Flower'),
               const SizedBox(width: 15.0),
             ],
           ),
@@ -85,11 +85,11 @@ class _PlantListState extends State<PlantList> {
   }
 
   getPlantCard(
-      String imgPath, String price, String plantType, String plantName) {
+      String imgPath, String plantType, String plantName) {
     return Stack(
       children: <Widget>[
         SizedBox(
-          height: 325.0,
+          height: 270.0,
           width: 225.0,
           child: Container(
             decoration: BoxDecoration(
@@ -105,22 +105,6 @@ class _PlantListState extends State<PlantList> {
                     Column(
                       children: <Widget>[
                         const SizedBox(height: 10.0),
-                        const Text(
-                          'FROM',
-                          style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 12.0,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF8AC7A4)),
-                        ),
-                        Text(
-                          '\$' + price,
-                          style: const TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white),
-                        )
                       ],
                     ),
                     const SizedBox(width: 10.0)
@@ -159,48 +143,7 @@ class _PlantListState extends State<PlantList> {
                 const SizedBox(height: 10.0),
                 Row(
                   children: <Widget>[
-                    const SizedBox(width: 25.0),
-                    Container(
-                      height: 30.0,
-                      width: 30.0,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: const Color(0xFF8AC7A4),
-                              style: BorderStyle.solid,
-                              width: 0.5),
-                          borderRadius: BorderRadius.circular(5.0),
-                          color: const Color(0xFF399D63)),
-                      child: Icon(Icons.wb_sunny,
-                          color: Colors.white.withOpacity(0.4), size: 20.0),
-                    ),
-                    const SizedBox(width: 15.0),
-                    Container(
-                      height: 30.0,
-                      width: 30.0,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: const Color(0xFF8AC7A4),
-                              style: BorderStyle.solid,
-                              width: 0.5),
-                          borderRadius: BorderRadius.circular(5.0),
-                          color: const Color(0xFF399D63)),
-                      child: Icon(Icons.branding_watermark,
-                          color: Colors.white.withOpacity(0.4), size: 20.0),
-                    ),
-                    const SizedBox(width: 15.0),
-                    Container(
-                      height: 30.0,
-                      width: 30.0,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: const Color(0xFF8AC7A4),
-                              style: BorderStyle.solid,
-                              width: 0.5),
-                          borderRadius: BorderRadius.circular(5.0),
-                          color: const Color(0xFF399D63)),
-                      child: Icon(Icons.hot_tub,
-                          color: Colors.white.withOpacity(0.4), size: 20.0),
-                    ),
+
                     const SizedBox(width: 10.0),
                     InkWell(
                       onTap: () {
@@ -227,10 +170,6 @@ class _PlantListState extends State<PlantList> {
           child: Container(
             height: 50.0,
             width: 50.0,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25.0), color: Colors.black),
-            child: const Center(
-                child: Icon(Icons.shopping_cart, color: Colors.white)),
           ),
         )
       ],
