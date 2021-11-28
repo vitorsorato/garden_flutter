@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:garden/plantlist.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
@@ -14,6 +16,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -24,7 +28,6 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   void initState() {
-    // TODO: implement initState
     tabController = TabController(vsync: this, length: 4);
     super.initState();
   }
@@ -34,15 +37,15 @@ class _MyHomePageState extends State<MyHomePage>
     return Scaffold(
         body: ListView(
       children: <Widget>[
-        SizedBox(height: 15.0),
+        const SizedBox(height: 15.0),
         Container(
           width: MediaQuery.of(context).size.width,
-          padding: EdgeInsets.only(right: 10.0),
+          padding: const EdgeInsets.only(right: 10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.menu),
+                icon: const Icon(Icons.menu),
                 onPressed: () {},
               ),
               FloatingActionButton(
@@ -50,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage>
                   backgroundColor: Colors.grey.withOpacity(0.3),
                   mini: true,
                   elevation: 0.0,
-                  child: Icon(Icons.shopping_cart,
+                  child: const Icon(Icons.shopping_cart,
                       color: Colors.black, size: 17.0)),
             ],
           ),
@@ -66,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage>
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 15.0),
+          padding: const EdgeInsets.only(left: 15.0),
           child: TabBar(
             controller: tabController,
             indicatorColor: Colors.transparent,
@@ -113,15 +116,17 @@ class _MyHomePageState extends State<MyHomePage>
             ],
           ),
         ),
+        // ignore: sized_box_for_whitespace
         Container(
           height: MediaQuery.of(context).size.height - 200.0,
           child: TabBarView(
             controller: tabController,
+            // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
-              PlantList(),
-              PlantList(),
-              PlantList(),
-              PlantList()
+              const PlantList(),
+              const PlantList(),
+              const PlantList(),
+              const PlantList()
             ],
           ),
         )
