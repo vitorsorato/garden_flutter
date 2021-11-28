@@ -60,7 +60,7 @@ class _PlantListState extends State<PlantList> {
           ),
         ),
         const Padding(
-          padding: EdgeInsets.only(left: 25.0, top: 10.0),
+          padding: EdgeInsets.only(left: 25.0, top: 20.0),
           child: Text(
             'Description',
             style: TextStyle(
@@ -85,13 +85,12 @@ class _PlantListState extends State<PlantList> {
   }
 
   getPlantCard(
-      String imgPath, String plantType, String plantName) {
-        
+      String imgPath, String plantType, String plantName) {        
     return 
     GestureDetector(
       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => PlantDetail()));},
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => PlantDetail()));},
       child:Stack(
       children: <Widget>[
         SizedBox(
@@ -104,23 +103,11 @@ class _PlantListState extends State<PlantList> {
             height: 250.0,
             width: 225.0,
             child: Column(
-              children: <Widget>[
-                
-                Image(
-                  
+              children: <Widget>[                
+                Image(      
                   image: AssetImage(imgPath),
-                  height: 165.0,
-                  
+                  height: 175.0,                  
                 ),
-                /*InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => PlantDetail()));},
-                      child: Ink.image(
-                        image: AssetImage(imgPath),
-                        height: 165.0,
-                      )
-                ),*/
                 Row(
                   children: <Widget>[
                     const SizedBox(width: 25.0),
