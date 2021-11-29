@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:garden/plantlist.dart';
 import 'package:garden/lembretes.dart';
+import 'package:garden/NavigationDrawerWidget.dart';
 
 void main() => runApp(const MyApp());
+
+
+const primaryColor = const Color(0xFF399D63);
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -36,6 +40,11 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavigationDrawerWidget(),
+      appBar: AppBar(
+        backgroundColor: primaryColor,
+        title: Text('ABP Soluções Mobile'),
+      ),
         body: ListView(
       children: <Widget>[
         const SizedBox(height: 15.0),
@@ -45,11 +54,6 @@ class _MyHomePageState extends State<MyHomePage>
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () {},
-              ),
-
             ],
           ),
         ),
