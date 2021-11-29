@@ -21,7 +21,7 @@ class Lembretes extends StatelessWidget {
             leading: Icon(Icons.access_time),
             title: Text('Regar Planta Y'),
             subtitle: Text(
-              'A planta X precisa ser regada as 09:00 Hrs'
+              'A planta Y precisa ser regada as 09:00 Hrs'
             ),
           ),
         ),
@@ -30,7 +30,7 @@ class Lembretes extends StatelessWidget {
             leading: Icon(Icons.access_time),
             title: Text('Regar Planta Z'),
             subtitle: Text(
-              'A planta X precisa ser regada as 10:00 Hrs'
+              'A planta Z precisa ser regada as 10:00 Hrs'
             ),
           ),
         ),
