@@ -30,14 +30,14 @@ class MyApp extends StatelessWidget {
             ],
             child: MaterialApp(
               theme: ThemeData(
-                primarySwatch: Colors.cyan,
+                primarySwatch: Colors.green,
               ),
               debugShowCheckedModeBanner: false,
               home: const Wrapper(),
             ),
           );
         } else {
-          return MaterialApp(
+          return const MaterialApp(
             home: Loading(),
           );
         }
