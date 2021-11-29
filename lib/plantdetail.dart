@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class PlantDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,14 +36,13 @@ class PlantDetail extends StatelessWidget {
                   },
                 ),
               ),
-
               Padding(
                 padding: EdgeInsets.only(left: 25.0, top: 60.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Ficus',
+                      'Abacateiro',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 45.0,
@@ -51,14 +51,13 @@ class PlantDetail extends StatelessWidget {
                     ),
                     SizedBox(height: 15.0),
                     Text(
-                      'Small',
+                      'Frutífera',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 25.0,
                           fontWeight: FontWeight.w300,
                           color: Colors.white),
                     ),
-                    SizedBox(height: 10.0),
                   ],
                 ),
               ),
@@ -73,14 +72,15 @@ class PlantDetail extends StatelessWidget {
               ),
               Padding(
                   padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height - 275.0,
+                      top: MediaQuery.of(context).size.height - 355.0,
                       left: 20.0,
-                      right: 15.0),
+                      right: 15.0,
+                      bottom: 30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'All to know...',
+                        'Origem',
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 25.0,
@@ -88,7 +88,7 @@ class PlantDetail extends StatelessWidget {
                       ),
                       SizedBox(height: 12.0),
                       Text(
-                        'If you are completely new to houseplants then Ficus is a brilliant first plant to adopt, it is very easy to look after and won\'t occupy too much space.',
+                        'América Central (Guatemala, Antilhas e México)',
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 14.0,
@@ -96,7 +96,7 @@ class PlantDetail extends StatelessWidget {
                       ),
                       SizedBox(height: 30.0),
                       Text(
-                        'Details',
+                        'Cultivo',
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 20.0,
@@ -104,17 +104,27 @@ class PlantDetail extends StatelessWidget {
                       ),
                       SizedBox(height: 10.0),
                       Text(
-                        'Plant height: 35-45cm;',
+                        'O abacateiro cresce mais facilmente em solos leves, profundos, drenados e ligeiramente ácidos. As melhores condições climáticas são encontradas em regiões com chuvas em torno de 1200 milímetros anuais',
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 14.0,
                         ),
                       ),
+                      SizedBox(height: 30.0),
                       Text(
-                        'Nursery pot width: 12cm',
+                        'Uso',
+                        style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      SizedBox(height: 10.0, ),
+                      Text(
+                        'Abacate faz bem pois tem propriedades benéficas, seja para a saúde do corpo que para a beleza, e isso tem sido confirmado pela ciência. O abacate é rico em gorduras “boas”, é fonte de vitamina E, um nutriente com potencial rejuvenescedor.Essa fruta é de fácil digestão, é rica em sais minerais, fornece a energia que precisamos para encarar o dia, principalmente se for consumida de manhã. As gorduras e os óleos do abacate servem também para tratamentos de beleza da pele e dos cabelos',
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 14.0,
+                          
                         ),
                       ),
                     ],
