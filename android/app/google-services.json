@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952193516044",
+    "project_id": "garden-abp",
+    "storage_bucket": "garden-abp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952193516044:android:f68991abbbc70f1b816429",
+        "android_client_info": {
+          "package_name": "br.com.vitorsorato.garden"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952193516044-cpt24ld854jef1k3pikdq24vvr64nr2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV0Qo32a_7E9jboDdoDnp5auHjhrnnpAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952193516044-cpt24ld854jef1k3pikdq24vvr64nr2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
