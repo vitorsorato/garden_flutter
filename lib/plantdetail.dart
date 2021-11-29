@@ -65,7 +65,7 @@ class PlantDetail extends StatelessWidget {
                 top: (MediaQuery.of(context).size.height / 2) - 185.0,
                 left: (MediaQuery.of(context).size.width / 2) - 100.0,
                 child: Image(
-                  image: AssetImage('assets/whiteplant.png'),
+                  image: AssetImage('assets/abacate.png'),
                   fit: BoxFit.cover,
                   height: 200.0,
                 ),
