@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:garden/authentication.dart';
 import 'package:garden/plantlist.dart';
+import 'package:garden/services.dart';
+import 'package:provider/provider.dart';
 
 class Garden extends StatelessWidget {
   const Garden({Key? key}) : super(key: key);
@@ -32,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
+    final loginProvider = Provider.of<AuthServices>(context);
     return Scaffold(
         body: ListView(
       children: <Widget>[
@@ -47,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage>
                 onPressed: () {},
               ),
               FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () async => await loginProvider.logout(),
                   backgroundColor: Colors.grey.withOpacity(0.3),
                   mini: true,
                   elevation: 0.0,

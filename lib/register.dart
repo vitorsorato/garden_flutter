@@ -112,7 +112,10 @@ class _RegisterState extends State<Register> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: loginProvider.isLoading
-                        ? const CircularProgressIndicator()
+                        ? const CircularProgressIndicator(
+                            valueColor:
+                                AlwaysStoppedAnimation<Color>(Colors.blue),
+                          )
                         : const Text(
                             "Registrar",
                             style: TextStyle(
@@ -143,17 +146,19 @@ class _RegisterState extends State<Register> {
                   SizedBox(height: 20),
                   if (loginProvider.errorMessage != null)
                     Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       color: Colors.amberAccent,
                       child: ListTile(
                         title: Text(loginProvider.errorMessage),
                         leading: const Icon(Icons.error),
                         trailing: IconButton(
                           icon: const Icon(Icons.close),
-                          onPressed: () {},
+                          onPressed: () => loginProvider.setMessage(null),
                         ),
                       ),
                     )
-                    */
+                  */
                 ],
               ),
             ),
