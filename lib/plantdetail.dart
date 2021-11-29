@@ -36,50 +36,12 @@ class PlantDetail extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(
-                    top: 10.0, left: MediaQuery.of(context).size.width - 60.0),
-                child: FloatingActionButton(
-                  onPressed: () {},
-                  backgroundColor: Color(0xFF4DA774),
-                  mini: true,
-                  elevation: 0.0,
-                  child: Icon(Icons.shopping_cart,
-                      color: Colors.white, size: 15.0),
-                ),
-              ),
-              Positioned(
-                top: 10.0,
-                left: MediaQuery.of(context).size.width - 30.0,
-                child: Container(
-                  height: 18.0,
-                  width: 18.0,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9.0),
-                      color: Colors.white),
-                  child: Center(
-                    child: Text(
-                      '1',
-                      style: TextStyle(
-                          color: Color(0xFF399D63), fontFamily: 'Montserrat'),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
                 padding: EdgeInsets.only(left: 25.0, top: 60.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'INDOOR',
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF8AC7A4)),
-                    ),
-                    Text(
-                      'Ficus',
+                      'Abacateiro',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 45.0,
@@ -88,71 +50,36 @@ class PlantDetail extends StatelessWidget {
                     ),
                     SizedBox(height: 15.0),
                     Text(
-                      'FROM',
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF8AC7A4)),
-                    ),
-                    Text(
-                      '\$30',
+                      'Frutífera',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 25.0,
                           fontWeight: FontWeight.w300,
                           color: Colors.white),
                     ),
-                    SizedBox(height: 15.0),
-                    Text(
-                      'SIZES',
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF8AC7A4)),
-                    ),
-                    Text(
-                      'Small',
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white),
-                    ),
-                    SizedBox(height: 10.0),
-                    Container(
-                      height: 50.0,
-                      width: 50.0,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25.0),
-                          color: Colors.black),
-                      child: Center(
-                        child: Icon(Icons.shopping_cart, color: Colors.white),
-                      ),
-                    )
                   ],
                 ),
               ),
               Positioned(
                 top: (MediaQuery.of(context).size.height / 2) - 185.0,
-                left: (MediaQuery.of(context).size.width / 2) - 80.0,
+                left: (MediaQuery.of(context).size.width / 2) - 100.0,
                 child: Image(
-                  image: AssetImage('whiteplant.png'),
+                  image: AssetImage('assets/abacate.png'),
                   fit: BoxFit.cover,
-                  height: 250.0,
+                  height: 200.0,
                 ),
               ),
               Padding(
                   padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height - 275.0,
+                      top: MediaQuery.of(context).size.height - 355.0,
                       left: 20.0,
-                      right: 15.0),
+                      right: 15.0,
+                      bottom: 30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'All to know...',
+                        'Origem',
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 25.0,
@@ -160,7 +87,7 @@ class PlantDetail extends StatelessWidget {
                       ),
                       SizedBox(height: 12.0),
                       Text(
-                        'If you are completely new to houseplants then Ficus is a brilliant first plant to adopt, it is very easy to look after and won\'t occupy too much space.',
+                        'América Central (Guatemala, Antilhas e México)',
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 14.0,
@@ -168,7 +95,7 @@ class PlantDetail extends StatelessWidget {
                       ),
                       SizedBox(height: 30.0),
                       Text(
-                        'Details',
+                        'Cultivo',
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 20.0,
@@ -176,14 +103,25 @@ class PlantDetail extends StatelessWidget {
                       ),
                       SizedBox(height: 10.0),
                       Text(
-                        'Plant height: 35-45cm;',
+                        'O abacateiro cresce mais facilmente em solos leves, profundos, drenados e ligeiramente ácidos. As melhores condições climáticas são encontradas em regiões com chuvas em torno de 1200 milímetros anuais',
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 14.0,
                         ),
                       ),
+                      SizedBox(height: 30.0),
                       Text(
-                        'Nursery pot width: 12cm',
+                        'Uso',
+                        style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        'Abacate faz bem pois tem propriedades benéficas, seja para a saúde do corpo que para a beleza, e isso tem sido confirmado pela ciência. O abacate é rico em gorduras “boas”, é fonte de vitamina E, um nutriente com potencial rejuvenescedor.Essa fruta é de fácil digestão, é rica em sais minerais, fornece a energia que precisamos para encarar o dia, principalmente se for consumida de manhã. As gorduras e os óleos do abacate servem também para tratamentos de beleza da pele e dos cabelos',
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 14.0,
