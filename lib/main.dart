@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:garden/authentication.dart';
-import 'package:garden/login.dart';
 import 'package:garden/services.dart';
 import 'package:garden/wrapper.dart';
 import 'package:provider/provider.dart';
@@ -36,7 +34,9 @@ class MyApp extends StatelessWidget {
             ),
           );
         } else {
-          return Loading();
+          return MaterialApp(
+            home: Loading(),
+          );
         }
       },
     );
@@ -65,7 +65,9 @@ class Loading extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: CircularProgressIndicator(),
+        child: CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+        ),
       ),
     );
   }

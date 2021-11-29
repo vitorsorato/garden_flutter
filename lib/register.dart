@@ -43,13 +43,8 @@ class _RegisterState extends State<Register> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
                   const SizedBox(
                     height: 40,
-                  ),
-                  const SizedBox(
-                    height: 30,
                   ),
                   const Text("Bem-vindo(a)",
                       style: TextStyle(
@@ -142,12 +137,11 @@ class _RegisterState extends State<Register> {
                       ),
                     ],
                   ),
-                  /*
-                  SizedBox(height: 20),
-                  if (loginProvider.errorMessage != null)
+                  const SizedBox(height: 20),
+                  if (loginProvider.errorMessage.isNotEmpty)
                     Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
                       color: Colors.amberAccent,
                       child: ListTile(
                         title: Text(loginProvider.errorMessage),
@@ -158,7 +152,6 @@ class _RegisterState extends State<Register> {
                         ),
                       ),
                     )
-                  */
                 ],
               ),
             ),

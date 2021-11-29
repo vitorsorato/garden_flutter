@@ -43,8 +43,6 @@ class _LoginState extends State<Login> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
                   const SizedBox(
                     height: 40,
                   ),
@@ -138,7 +136,22 @@ class _LoginState extends State<Login> {
                         child: const Text("Registrar"),
                       ),
                     ],
-                  )
+                  ),
+                  const SizedBox(height: 20),
+                  if (loginProvider.errorMessage.isNotEmpty)
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      color: Colors.amberAccent,
+                      child: ListTile(
+                        title: Text(loginProvider.errorMessage),
+                        leading: const Icon(Icons.error),
+                        trailing: IconButton(
+                          icon: const Icon(Icons.close),
+                          onPressed: () => loginProvider.setMessage(null),
+                        ),
+                      ),
+                    )
                 ],
               ),
             ),
