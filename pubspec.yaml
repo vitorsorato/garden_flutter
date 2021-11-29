@@ -60,10 +60,16 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/aloevera.png
-   - assets/ficus.png
-   - assets/whiteplant.png
-   - assets/smallplant.png
+   - assets/cannabis.png
    - assets/flowerplant.png
+   - assets/abacate.png
+   - assets/acelga.png
+   - assets/erva-mate.png
+   - assets/ora-pro-nobis.png
+   - assets/grama-esmeralda.png
+   - assets/pessegueiro.png
+   - assets/salsa.png
+   - assets/sequoia.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
