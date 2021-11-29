@@ -44,7 +44,7 @@ class _RegisterState extends State<Register> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 40,
+                    height: 70,
                   ),
                   const Text("Bem-vindo(a)",
                       style: TextStyle(
