@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garden/plantlist.dart';
+import 'package:garden/lembretes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -80,8 +81,8 @@ class _MyHomePageState extends State<MyHomePage>
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              Tab(
-                child: Text(
+              Tab(            
+                child: Text(                  
                   'Lembretes',
                   style: TextStyle(
                       fontSize: 17.0,
@@ -118,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage>
             // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
               const PlantList(),
-              const PlantList(),
+              Lembretes(),
               const PlantList(),
               const PlantList()
             ],
