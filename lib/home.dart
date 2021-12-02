@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   void initState() {
-    tabController = TabController(vsync: this, length: 4);
+    tabController = TabController(vsync: this, length: 2);
     super.initState();
   }
 
@@ -91,24 +91,6 @@ class _MyHomePageState extends State<MyHomePage>
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Tab(
-                    child: Text(
-                      '',
-                      style: TextStyle(
-                          fontSize: 17.0,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  Tab(
-                    child: Text(
-                      '',
-                      style: TextStyle(
-                          fontSize: 17.0,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.bold),
-                    ),
-                  )
                 ],
               ),
             ),
@@ -121,8 +103,6 @@ class _MyHomePageState extends State<MyHomePage>
                 children: <Widget>[
                   const PlantList(),
                   Lembretes(),
-                  const PlantList(),
-                  const PlantList()
                 ],
               ),
             )

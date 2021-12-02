@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:garden/authentication/services.dart';
 import 'package:garden/pages/favourites_plants_page.dart';
 import 'package:garden/pages/people_page.dart';
 import 'package:garden/pages/new_plants_page.dart';
 import 'package:garden/pages/notifications_page.dart';
-import 'package:garden/services.dart';
 import 'package:provider/provider.dart';
 
 const primaryColor = Color(0xFF399D63);
@@ -92,7 +92,7 @@ void selectedItem(BuildContext context, int index) {
       break;
     case 2:
       Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => NewPlantsPage(),
+        builder: (context) => const NewPlants(),
       ));
       break;
     case 3:

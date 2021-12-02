@@ -37,6 +37,11 @@ dependencies:
   provider: ^6.0.1
   firebase_core: ^1.10.0
   firebase_auth: ^3.2.0
+  image_picker: ^0.8.2
+  path_provider: ^2.0.2
+  flutter_image_compress: ^1.0.0
+  firebase_storage: ^10.0.1
+  image_cropper: ^1.4.1
 dev_dependencies:
   flutter_launcher_icons: "^0.7.0"
   flutter_test:

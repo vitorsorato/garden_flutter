@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:garden/services.dart';
+import 'package:garden/authentication/services.dart';
 import 'package:provider/provider.dart';
 
 class Register extends StatefulWidget {
@@ -14,12 +14,14 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
+  late TextEditingController _passwordConfirmController;
   final _formkey = GlobalKey<FormState>();
 
   @override
   void initState() {
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
+    _passwordConfirmController = TextEditingController();
     super.initState();
   }
 
@@ -27,6 +29,7 @@ class _RegisterState extends State<Register> {
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
+    _passwordConfirmController.dispose();
     super.dispose();
   }
 
@@ -64,9 +67,9 @@ class _RegisterState extends State<Register> {
                   TextFormField(
                     controller: _emailController,
                     validator: (val) =>
-                        val!.isNotEmpty ? null : "Informe seu email",
+                        val!.isNotEmpty ? null : "Informe seu email.",
                     decoration: InputDecoration(
-                        hintText: "Email",
+                        hintText: "Seu e-mail..",
                         prefixIcon: const Icon(Icons.mail),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -78,10 +81,25 @@ class _RegisterState extends State<Register> {
                   TextFormField(
                     controller: _passwordController,
                     validator: (val) => val!.length < 6
-                        ? "A senha deve ter pelo menos 6 caracteres"
+                        ? "A senha deve ter pelo menos 6 caracteres."
                         : null,
                     decoration: InputDecoration(
-                        hintText: "Senha",
+                        hintText: "Sua nova senha..",
+                        prefixIcon: const Icon(Icons.vpn_key),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        )),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextFormField(
+                    controller: _passwordConfirmController,
+                    validator: (val) => val != _passwordController.text
+                        ? "A confirmação de senha está diferente da senha original."
+                        : null,
+                    decoration: InputDecoration(
+                        hintText: "Confirme a nova senha..",
                         prefixIcon: const Icon(Icons.vpn_key),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -94,7 +112,9 @@ class _RegisterState extends State<Register> {
                     onPressed: () async {
                       if (_formkey.currentState!.validate()) {
                         print("Email: ${_emailController.text}");
-                        print("Email: ${_passwordController.text}");
+                        print("Senha: ${_passwordController.text}");
+                        print(
+                            "Confirmação: ${_passwordConfirmController.text}");
                         await loginProvider.register(
                             _emailController.text.trim(),
                             _passwordController.text.trim());

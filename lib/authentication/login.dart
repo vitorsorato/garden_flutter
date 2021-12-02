@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:garden/services.dart';
+import 'package:garden/authentication/services.dart';
 import 'package:provider/provider.dart';
 
 class Login extends StatefulWidget {

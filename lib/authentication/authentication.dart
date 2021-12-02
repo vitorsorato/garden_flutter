@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:garden/login.dart';
-import 'package:garden/register.dart';
+import 'package:garden/authentication/login.dart';
+import 'package:garden/authentication/register.dart';
 
 class Authentication extends StatefulWidget {
   const Authentication({Key? key}) : super(key: key);
