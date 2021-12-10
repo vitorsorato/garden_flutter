@@ -17,7 +17,10 @@ class MyApp extends StatelessWidget {
       future: _init,
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return const ErrorWidget();
+          print("Email: ${snapshot.error}");
+          return const MaterialApp(
+            home: ErrorWidget(),
+          );
         } else if (snapshot.hasData) {
           return MultiProvider(
             providers: [
